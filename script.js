@@ -41,7 +41,7 @@ function initCountdown() {
 }
 
 // ========================================
-// Email Signup Form
+// Email Signup Form (Formspree)
 // ========================================
 function initSignupForm() {
     const form = document.getElementById('signupForm');
@@ -59,25 +59,50 @@ function initSignupForm() {
             return;
         }
         
-        // Simulate API call
+        // Update replyto field
+        form.querySelector('input[name="_replyto"]').value = email;
+        
+        // Show loading state
         const submitBtn = form.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<span class="btn-text">GÖNDERİLİYOR...</span>';
         submitBtn.disabled = true;
         
-        setTimeout(() => {
-            // Store email (in real app, send to backend)
-            storeEmail(email);
-            
-            // Show success
-            form.style.display = 'none';
-            successMessage.classList.add('active');
-            
-            // Increment counter
-            incrementMemberCount();
-            
-            showNotification('Başarıyla kaydoldun! 🎉');
-        }, 1500);
+        // Submit to Formspree via fetch
+        const formData = new FormData(form);
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Store locally too
+                storeEmail(email);
+                
+                // Show success
+                form.style.display = 'none';
+                successMessage.classList.add('active');
+                
+                // Increment counter
+                incrementMemberCount();
+                
+                // Confetti!
+                createConfetti();
+                
+                showNotification('Başarıyla kaydoldun! 🎉');
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            showNotification('Bir hata oluştu, tekrar dene!');
+        });
     });
     
     // Real-time validation feedback
@@ -99,7 +124,8 @@ function storeEmail(email) {
     let emails = JSON.parse(localStorage.getItem('hypedEmails') || '[]');
     
     // Check if email already exists
-    if (!emails.includes(email)) {
+    const exists = emails.some(e => e.email === email);
+    if (!exists) {
         emails.push({
             email: email,
             date: new Date().toISOString()

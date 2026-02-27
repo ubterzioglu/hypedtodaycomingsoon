@@ -113,15 +113,18 @@
                 <p class="card-description">
                     İlk 1000 üye <strong>"Founding Member"</strong> rozeti kazansın!
                 </p>
-                <form class="signup-form" id="signupForm">
+                <form class="signup-form" id="signupForm" action="https://formspree.io/f/xqkvroyz" method="POST">
                     <div class="input-group">
                         <input 
                             type="email" 
+                            name="email"
                             id="email" 
                             placeholder="email@adresin.com" 
                             required
                             class="email-input"
                         >
+                        <input type="hidden" name="_subject" value="🚀 Yeni hyped.today Kaydı!">
+                        <input type="hidden" name="_replyto" value="">
                         <button type="submit" class="submit-btn">
                             <span class="btn-text">BENİ HYPE'LA</span>
                             <span class="btn-icon">⚡</span>
@@ -186,7 +189,7 @@
             <div class="community-card">
                 <h3>🤝 Topluluğa Katıl</h3>
                 <p>Türk girişimcilerin WhatsApp topluluğunda yerini al!</p>
-                <a href="#" class="community-btn" onclick="showNotification('Yakında açılıyor!'); return false;">
+                <a href="https://chat.whatsapp.com/JXzMvjJoc57EKDDABSB0jo" target="_blank" class="community-btn">
                     <span>WhatsApp Grubu</span>
                     <span class="arrow">→</span>
                 </a>
