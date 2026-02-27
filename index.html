@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyped.today - Coming Soon | Support to Promote. Promote to Support.</title>
+    <meta name="description" content="Türk girişimciler için karşılıklı destek platformu. Projelerini vitrine çıkar, topluluktan destek al, birlikte büyüyün.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="hyped.today - Coming Soon">
+    <meta property="og:description" content="Türk girişimciler için karşılıklı destek platformu">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hyped.today">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="hyped.today - Coming Soon">
+    <meta name="twitter:description" content="Türk girişimciler için karşılıklı destek platformu">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+    <!-- Background Pattern -->
+    <div class="bg-pattern"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1">🔥</div>
+        <div class="shape shape-2">⚡</div>
+        <div class="shape shape-3">🚀</div>
+        <div class="shape shape-4">💎</div>
+        <div class="shape shape-5">⭐</div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🔥</span>
+            <span class="logo-text">hyped<span class="dot">.</span>today</span>
+        </div>
+        <div class="header-badge">
+            <span class="badge">🚀 COMING SOON</span>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">
+                <span class="title-line">Support to</span>
+                <span class="title-line highlight">Promote.</span>
+                <span class="title-line">Promote to</span>
+                <span class="title-line highlight">Support.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Türk girişimcilerin projelerini vitrine çıkardığı, 
+                topluluktan <strong>karşılıklı destek</strong> aldığı platform.
+            </p>
+        </section>
+        
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <p class="countdown-label">Yayına Geçişe Kalan Süre</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-text">Gün</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-text">Saat</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-text">Dakika</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-text">Saniye</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Email Signup -->
+        <section class="signup-section">
+            <div class="signup-card">
+                <div class="card-header">
+                    <span class="card-icon">📧</span>
+                    <h2>Erken Erişim İçin Kaydol</h2>
+                </div>
+                <p class="card-description">
+                    İlk 1000 üye <strong>"Founding Member"</strong> rozeti kazansın!
+                </p>
+                <form class="signup-form" id="signupForm">
+                    <div class="input-group">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="email@adresin.com" 
+                            required
+                            class="email-input"
+                        >
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">BENİ HYPE'LA</span>
+                            <span class="btn-icon">⚡</span>
+                        </button>
+                    </div>
+                    <p class="form-note">
+                        <span class="check">✓</span> Spam yok, sadece hype haberleri
+                    </p>
+                </form>
+                <div class="success-message" id="successMessage">
+                    <span class="success-icon">🎉</span>
+                    <p>Harika! Listemize eklendin.<br>Hype treni kalkıyor! 🚀</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Grid -->
+        <section class="features-section">
+            <h3 class="section-title">Neler Olacak?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h4>Proje Vitrini</h4>
+                    <p>Projeni sergile, dünyaya göster</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗳️</div>
+                    <h4>Oylama Sistemi</h4>
+                    <p>Topluluk desteğiyle öne çık</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h4>Reputation</h4>
+                    <p>Destekle, itibar kazan</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <h4>Tester Marketplace</h4>
+                    <p>Beta testler için kullanıcı bul</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <span class="stat-number" id="memberCount">0</span>
+                <span class="stat-label">Ön Kayıtlı</span>
+            </div>
+            <div class="stat-card accent">
+                <span class="stat-icon">🇹🇷</span>
+                <span class="stat-label">Türkiye Odaklı</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Ücretsiz</span>
+            </div>
+        </section>
+        
+        <!-- Community CTA -->
+        <section class="community-section">
+            <div class="community-card">
+                <h3>🤝 Topluluğa Katıl</h3>
+                <p>Türk girişimcilerin WhatsApp topluluğunda yerini al!</p>
+                <a href="#" class="community-btn" onclick="showNotification('Yakında açılıyor!'); return false;">
+                    <span>WhatsApp Grubu</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">🔥</span>
+                <span>hyped.today</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/ubterzioglu/hypedtoday" target="_blank" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter" onclick="showNotification('Yakında!'); return false;">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">
+            © 2025 hyped.today — Made with 🔥 in Türkiye
+        </p>
+    </footer>
+    
+    <!-- Notification Toast -->
+    <div class="notification" id="notification">
+        <span class="notification-icon">💡</span>
+        <span class="notification-text" id="notificationText"></span>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
