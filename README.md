@@ -1,4 +1,5 @@
 # 🔥 hyped.today - Coming Soon
+# 🔥 hyped.today - Coming Soon
 
 Neo-brutalist "Coming Soon" landing page for **hyped.today** - A reciprocal support platform for Turkish entrepreneurs and startups.
 
